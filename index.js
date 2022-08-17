@@ -11,6 +11,7 @@ export default {
   install: function (app) {
     app.directive("tooltip", function (el, binding) {
       var node = null;
+      console.log('render', el, binding)
       el.addEventListener("mouseover", function () {
         const container = document.createElement("div");
         var props = {
