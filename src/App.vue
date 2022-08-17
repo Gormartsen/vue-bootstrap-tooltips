@@ -13,7 +13,6 @@
     display: flex;
     place-items: center;
   }
-
 }
 .root {
   position: relative;
@@ -54,7 +53,6 @@
   }
 }
 
-
 @media (max-width: 991.98px) {
   .bd-main {
     max-width: 760px;
@@ -79,35 +77,51 @@
 }
 </style>
 <template>
-<div class="container">
-  <div style="height: 100px;">
-  1
+  <div class="container">
+    <div style="height: 100px">1</div>
 
+    <button
+      type="button"
+      class="btn btn-secondary"
+      v-tooltip.top="'Tooltip on top'"
+    >
+      Tooltip on top
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      v-tooltip.right="'Tooltip on right'"
+    >
+      Tooltip on right
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      v-tooltip.bottom="'Tooltip on bottom'"
+    >
+      Tooltip on bottom
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      v-tooltip.left="'Tooltip on left'"
+    >
+      Tooltip on left
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      v-tooltip.html="'<em>Tooltip</em> <u>with</u> <b>HTML</b>'"
+    >
+      Tooltip with HTML
+    </button>
   </div>
-
-  <button type="button" class="btn btn-secondary" v-tooltip.top="'Tooltip on top'">
-    Tooltip on top
-  </button>
-  <button type="button" class="btn btn-secondary" v-tooltip.right="'Tooltip on right'">
-    Tooltip on right
-  </button>
-  <button type="button" class="btn btn-secondary" v-tooltip.bottom="'Tooltip on bottom'">
-    Tooltip on bottom
-  </button>
-  <button type="button" class="btn btn-secondary" v-tooltip.left="'Tooltip on left'">
-    Tooltip on left
-  </button>
-  <button type="button" class="btn btn-secondary" v-tooltip.html="'<em>Tooltip</em> <u>with</u> <b>HTML</b>'">
-    Tooltip with HTML
-  </button>
-</div>
 </template>
 <script>
 export default {
   data() {
-    return {
-    };
+    return {};
   },
-  mounted() {}
+  mounted() {},
 };
 </script>

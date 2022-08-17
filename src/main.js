@@ -7,7 +7,6 @@ window.APP = createApp(App);
 
 window.APP.use(Debug, true);
 
-
 import TooltipComponent from "../index";
 
 window.APP.use(TooltipComponent);
