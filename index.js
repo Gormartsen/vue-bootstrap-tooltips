@@ -1,5 +1,5 @@
 import { createVNode, render } from "vue";
-import Component from "@/TooltipComponent.vue";
+import Component from "./src/TooltipComponent.vue";
 
 export default {
   install: function (app) {
