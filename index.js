@@ -13,6 +13,10 @@ export default {
       var node = null;
       console.log('render', el, binding)
       el.addEventListener("mouseover", function () {
+        if(node != null) {
+          console.log('already rendered')
+          return;
+        } 
         const container = document.createElement("div");
         var props = {
           placement: "top",
@@ -38,7 +42,11 @@ export default {
         node = container.firstElementChild;
         document.body.appendChild(node);
       });
-      el.addEventListener("mouseleave", cleanTooltip);
+      el.addEventListener("mouseleave", function(){
+        if(node !== null) {
+          node.parentNode.removeChild(node);
+        }
+      });
     });
   },
 };
