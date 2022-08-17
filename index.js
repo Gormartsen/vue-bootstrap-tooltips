@@ -45,6 +45,7 @@ export default {
       el.addEventListener("mouseleave", function(){
         if(node !== null) {
           node.parentNode.removeChild(node);
+          node = null
         }
       });
     });
