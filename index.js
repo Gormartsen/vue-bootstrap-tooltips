@@ -1,20 +1,12 @@
 import { createVNode, render } from "vue";
 import Component from "./src/TooltipComponent.vue";
 
-
-var cleanTooltip = function(){
-  var node = document.querySelector(".tooltip")
-  node.parentNode.removeChild(node);
-  console.log('remove', node)
-}
 export default {
   install: function (app) {
     app.directive("tooltip", function (el, binding) {
       var node = null;
-      console.log('render', el, binding)
       el.addEventListener("mouseover", function () {
         if(node != null) {
-          console.log('already rendered')
           return;
         } 
         const container = document.createElement("div");
