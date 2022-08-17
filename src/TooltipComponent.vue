@@ -1,6 +1,6 @@
 <style lang="scss"></style>
 <template>
-  <div class="tooltip tooltip fade show" :class="placementClass" role="tooltip">
+  <div class="tooltip fade show" :class="placementClass" role="tooltip">
     <div class="tooltip-arrow" data-popper-arrow="placement"></div>
     <div class="tooltip-inner" v-if="!html">{{ value }}</div>
     <div class="tooltip-inner" v-if="html" v-html="value"></div>

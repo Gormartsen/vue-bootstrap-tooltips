@@ -3,7 +3,7 @@ import Component from "./src/TooltipComponent.vue";
 
 var node = null;
 var cleanTooltip = function(){
-  document.querySelector("body").removeChild(node);
+  document.querySelector(".tooltip").parentNode.removeChild(node);
 }
 export default {
   install: function (app) {
