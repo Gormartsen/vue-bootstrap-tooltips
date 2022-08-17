@@ -1,10 +1,13 @@
 import { createVNode, render } from "vue";
 import Component from "./src/TooltipComponent.vue";
 
+var node = null;
+var cleanTooltip = function(){
+  document.querySelector("body").removeChild(node);
+}
 export default {
   install: function (app) {
     app.directive("tooltip", function (el, binding) {
-      var node = null;
       el.addEventListener("mouseover", function () {
         const container = document.createElement("div");
         var props = {
@@ -31,9 +34,7 @@ export default {
         node = container.firstElementChild;
         document.body.appendChild(node);
       });
-      el.addEventListener("mouseleave", function () {
-        document.querySelector("body").removeChild(node);
-      });
+      el.addEventListener("mouseleave", cleanTooltip);
     });
   },
 };
