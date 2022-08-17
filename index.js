@@ -5,6 +5,7 @@ import Component from "./src/TooltipComponent.vue";
 var cleanTooltip = function(){
   var node = document.querySelector(".tooltip")
   node.parentNode.removeChild(node);
+  console.log('remove', node)
 }
 export default {
   install: function (app) {
