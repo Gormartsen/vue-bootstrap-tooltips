@@ -6,30 +6,15 @@
     <div class="tooltip-inner" v-if="html" v-html="value"></div>
   </div>
 </template>
-<script setup>
-import { createPopper } from "@popperjs/core";
-defineProps({
-  html: {
-    required: false,
-  },
-  placement: {
-    required: true,
-  },
-  value: {
-    required: true,
-  },
-  el: {
-    required: true,
-  },
-});
-</script>
 <script>
+import { createPopper } from "@popperjs/core";
 export default {
   data() {
     return {
       msg: "test",
     };
   },
+  props: ["html", "placement", "value", "el"],
   computed: {
     placementClass: function () {
       var position = this.placement;
